@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  
+}
+
+::-webkit-scrollbar-track {
+  background: #383737;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #E65C00, #f9d423); /* indigo-500 → pink-500 */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #E65C00, #f9d423); /* darken on hover */
+}
+*{
+  @apply transition-colors duration-200;
+}
+
+.navbar-item{
+  @apply text-center w-30 my-auto py-0.5 mx-2 rounded-full hover:bg-violet-900 hover:cursor-pointer font-bold pt-0.25 
+  transition-colors duration-400 ease-out
+  text-white uppercase
+}
+
+#nav-border{
+  @apply border-sky-400 transition-transform duration-500 ease-in-out z-1 
+}
+
+.btn{
+  
+  @apply transition-all duration-200 ease-initial hover:cursor-pointer active:translate-0.5
+}
+
+.selected-nav-item
+{
+  @apply bg-violet-900
+}
+
+.card-icon{
+ @apply  block relative m-auto h-full  transition-transform duration-500 ease-in-out
+}
+
+.card{
+  @apply rounded-xl border-2 w-64 h-auto border-gray-600 bg-neutral-100 dark:bg-gray-900
+}
+
+.card-icon[data=uxui], .card-title[data=uxui]{
+  @apply text-sky-400
+}
+.card-icon[data=web], .card-title[data=web]{
+  @apply text-sky-400
+}
+.card-icon[data=graphic], .card-title[data=graphic]{
+  @apply text-sky-400
+}
+.card-icon[data=desktop], .card-title[data=desktop]{
+  @apply text-sky-400
+}
+
+.card-title, .card-des{
+  @apply px-5 pb-1
+}
+.card-des{
+  @apply dark:text-white text-black
+}
+
+.card-title{
+  @apply text-2xl font-bold
+}
+
+.scroller__inner > img{
+  @apply w-16 h-16
+}
+
+h2.title-describe{
+  @apply text-4xl text-center text-sky-500 py-8 font-bold uppercase
+}
+
+.contact-icon{
+  @apply text-2xl
+}
+
+.connect-item{
+  @apply flex items-center justify-end gap-2 p-0.5 hover:scale-105 hover:translate-x-4 hover:translate-y-[-4px] transition-all duration-300 ease-in-out active:text-sky-500 active:scale-90
+}
+
+.connect-item > a {
+  @apply w-26 font-bold
+}
+
+.nav-items{
+  @apply font-bold text-yellow-500  cursor-pointer hover:scale-105 hover:translate-x-4 hover:translate-y-[-4px] transition-all duration-300 ease-in-out active:text-sky-500 active:scale-90
+}
+
+.intro__inner > h2{
+  
+  @apply text-3xl font-semibold mx-auto w-[80%] text-justify 
+
+}
+.p-card-image{
+  @apply transition-all duration-400 ease-in-out
+}
+
+.highligth-word
+{
+  @apply text-8xl bg-gradient-to-t from-orange-500  to-yellow-300 text-transparent bg-clip-text
+}

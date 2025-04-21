@@ -1,0 +1,6 @@
+.about-me{
+    background: url("../../assets/image/pink-gradient-moutain-landscape.jpeg")
+     repeat fixed 100% ;
+     background-position: center;
+     background-size: cover;
+}
