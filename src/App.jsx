@@ -7,14 +7,14 @@ import Footer from './components/footer/Footer'
 import NavBar from './components/headerMenu/Headerbar'
 import NavBurMenu from './components/headerMenu/HeaderBurgerMenu'
 import About from './components/about/About/'
-
+import SelfPortay from './assets/image/pfimg.png'
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [opacity, setOpacity] = useState(0);
   const [position, setPosition] = useState(1);
   const handleDownload = async () => {
-    const fileUrl = "https://files.catbox.moe/qx5cqc.pdf";
+    const fileUrl = "https://files.catbox.moe/d8u26v.pdf";
     const response = await fetch(fileUrl);
     const blob = await response.blob();
     const url = window.URL.createObjectURL(blob);
@@ -32,7 +32,7 @@ function App() {
       const handleScroll = () => {
       const scrollY = window.scrollY;
       const newOpacity = Math.max(0, scrollY / 500);
-      const newPos = Math.min(scrollY / 200, 1);
+      const newPos = Math.max(0, 1 - scrollY / 200);
       setOpacity(newOpacity);
       setPosition(newPos);
 
@@ -48,14 +48,15 @@ function App() {
     setDarkMode(!darkMode)
   };
 
-
+// "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnSA1zygA3rubv-VK0DrVcQ02Po79kJhXo_A&s"
   return (
     <div className={`${darkMode && "dark"} dark:bg-neutral-900 w-full  `} id="home-section" >
       <div className="fixed bg-[#0f0f0f] w-full h-15 z-1" style={{opacity: opacity}}></div>
       <div className='header fixed grid grid-cols-5 gap-2 mt-1 mx-auto left-1/2 -translate-x-1/2 w-full lg:w-[80%] z-10'>
         <div className='col-span-1 lg:col-span-0 lg:hidden pl-6'> <NavBurMenu /> </div>
         <div className="col-span-2 lg:col-span-1 pl-4 flex items-center ">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnSA1zygA3rubv-VK0DrVcQ02Po79kJhXo_A&s" alt="self-portray" 
+          
+          <img src={SelfPortay} alt="self-portray" 
           className='min-w-12 w-12 h-auto rounded-full border-[0.5px] '
           />
           <span id="aniTxt" className="name uppercase ml-2 sm:text-2xl font-bold bg-gradient-to-tr from-orange-500  to-yellow-300 text-transparent bg-clip-text "

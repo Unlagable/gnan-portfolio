@@ -14,10 +14,10 @@ const NavBar = () =>  {
     <div className={` w-fit mt-1 text-4xl hover:cursor-pointer ${!navMenuOpen ? "text-sky-400":"text-red-500"} `} onClick={() => setNavMenuOpen(!navMenuOpen)}> {navMenuOpen ? <ImCross /> : <GiHamburgerMenu />}</div>
 
     <div className={`nav-btn mt-4 absolute left-[10%] w-[80%] z-2 ${!navMenuOpen && "hidden"}`}>
-      <ul className="text-center bg-white *:h-10">
-        <li className={`${navIndex === 0 ? "selected-nav-item" : ""} rounded-t-4xl border-t-2 border-l-2 border-r-2`} onClick={ () => {setNavIndex(0);handleScroll(0);setNavMenuOpen(false)} }>Home</li>
-        <li className={`${navIndex === 1 ? "selected-nav-item" : ""} border-l-2 border-r-2`} onClick={ () => {setNavIndex(1);handleScroll(1);setNavMenuOpen(false)} }>About</li>
-        <li className={`${navIndex === 2 ? "selected-nav-item" : ""} rounded-b-4xl border-b-2 border-l-2 border-r-2`} onClick={ () => {setNavIndex(2);handleScroll(2);setNavMenuOpen(false)} }>Portfolio</li>
+      <ul className="text-center  *:h-8 *:uppercase *:text-xl *:font-semibold *:text-sky-400">
+        <li className={`${navIndex === 0 ? "selected-nav-item" : ""} bg-white rounded-t-4xl border-t-2 border-l-2 border-r-2`} onClick={ () => {setNavIndex(0);handleScroll(0);setNavMenuOpen(false)} }>Home</li>
+        <li className={`${navIndex === 1 ? "selected-nav-item" : ""} bg-white border-l-2 border-r-2`} onClick={ () => {setNavIndex(1);handleScroll(1);setNavMenuOpen(false)} }>About</li>
+        <li className={`${navIndex === 2 ? "selected-nav-item" : ""} bg-white rounded-b-4xl border-b-2 border-l-2 border-r-2`} onClick={ () => {setNavIndex(2);handleScroll(2);setNavMenuOpen(false)} }>Portfolio</li>
       </ul>
     </div>
     
