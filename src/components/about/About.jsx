@@ -3,11 +3,11 @@ import "./About.css"
 const About = () => {
 
   return (
-    <div className="about-me h-screen rounded-2xl" id="about-section">
+    <div className="about-me py-8 lg:py-0 lg:h-screen rounded-2xl" id="about-section">
         <div className="intro text-white text-left justify-center items-center h-full flex" >
             <div className="intro__inner">
 
-                <h1 className="text-7xl w-[85%] mx-auto text-center font-extrabold"  style={{ 
+                <h1 className="text-4xl md:text-7xl w-[85%] mx-auto text-center font-extrabold"  style={{ 
                     color: "white",
                     textShadow: `
                         -2px -2px 3px #000,  

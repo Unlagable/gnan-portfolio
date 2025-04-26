@@ -5,6 +5,7 @@ import Home from './components/home/Home/'
 import Portfolio from './components/projectPort/Portfolio'
 import Footer from './components/footer/Footer'
 import NavBar from './components/headerMenu/Headerbar'
+import NavBurMenu from './components/headerMenu/HeaderBurgerMenu'
 import About from './components/about/About/'
 
 
@@ -31,7 +32,7 @@ function App() {
       const handleScroll = () => {
       const scrollY = window.scrollY;
       const newOpacity = Math.max(0, scrollY / 500);
-      const newPos = Math.max(0, 1 - scrollY / 200);
+      const newPos = Math.min(scrollY / 200, 1);
       setOpacity(newOpacity);
       setPosition(newPos);
 
@@ -49,21 +50,22 @@ function App() {
 
 
   return (
-    <div className={`${darkMode && "dark"} dark:bg-neutral-900 w-full `} id="home-section" >
+    <div className={`${darkMode && "dark"} dark:bg-neutral-900 w-full  `} id="home-section" >
       <div className="fixed bg-[#0f0f0f] w-full h-15 z-1" style={{opacity: opacity}}></div>
-      <div className='header fixed grid grid-cols-5 gap-2 mt-1 mx-auto left-1/2 -translate-x-1/2 w-[80%] z-10'>
-        <div className="col-span-1 pl-4 flex items-center ">
+      <div className='header fixed grid grid-cols-5 gap-2 mt-1 mx-auto left-1/2 -translate-x-1/2 w-full lg:w-[80%] z-10'>
+        <div className='col-span-1 lg:col-span-0 lg:hidden pl-6'> <NavBurMenu /> </div>
+        <div className="col-span-2 lg:col-span-1 pl-4 flex items-center ">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnSA1zygA3rubv-VK0DrVcQ02Po79kJhXo_A&s" alt="self-portray" 
-          className='w-12 h-auto rounded-full border-[0.5px] '
+          className='min-w-12 w-12 h-auto rounded-full border-[0.5px] '
           />
-          <span id="aniTxt" className="name uppercase ml-2 text-2xl font-bold bg-gradient-to-tr from-orange-500  to-yellow-300 text-transparent bg-clip-text "
-           style={{transform: `translate(${position * 302 }%, ${position * 400 }%)` }}>
+          <span id="aniTxt" className="name uppercase ml-2 sm:text-2xl font-bold bg-gradient-to-tr from-orange-500  to-yellow-300 text-transparent bg-clip-text "
+           style={{transform: `translate(${position * 22}vw, ${position * 400 }%) `, transition: "transform 0.1s ease-out",}}>
             Somnang</span>
         </div>
-        <div className="col-span-3 h-full p-0 ">
+        <div className="hidden lg:block col-span-0 lg:col-span-3 h-full p-0 mx-auto">
           <NavBar/>
         </div>
-        <div className="col-span-1 h-full flex justify-end items-start  pr-6 ">
+        <div className="col-span-2 lg:col-span-1 h-full flex justify-end items-start  pr-6 ">
           <button type='submit' className='btn mt-2 border-2  border-neutral-200 min-h-8 w-24 mr-2 text-center flex rounded-2xl shadow-gray-600 shadow-2xs justify-center items-center
           hover:rounded-lg 
           active:text-blue-800 bg-gradient-to-r from-orange-500  to-yellow-300 text-white font-semibold 

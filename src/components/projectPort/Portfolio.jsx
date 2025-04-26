@@ -1,4 +1,6 @@
 import "./Portfolio.css"
+import jewerly from "../../assets/image/jewelry.png"
+import ralkenn from "../../assets/image/ralken design.png"
 
 const Portfolio = () => {
 
@@ -11,8 +13,8 @@ const Portfolio = () => {
 
             {/* items---------------------------------------------------------------------------- */}
             <div className="portfolio-card h-auto rounded-xl lg:rounded-2xl my-4 group">
-                <div className="p-card-img h-auto rounded-xl mb-1 border-2 border-gray-600 dark:bg-gray-900 items-center justify-center flex">
-                    <img src="src\assets\image\ralken design.png" alt="" className="p-card-image scale-85 drop-shadow-xl group-hover:drop-shadow-neutral-700 group-hover:scale-75 h-100 object-contain"/>
+                <div className="p-card-img h-auto rounded-xl mb-1 border-2 border-gray-600 bg-neutral-100 dark:bg-gray-900 items-center justify-center flex">
+                    <img src={ralkenn} alt="" className="p-card-image scale-85 drop-shadow-xl group-hover:drop-shadow-neutral-700 group-hover:scale-75 h-100 object-contain"/>
                 </div>
                 <div className="p-card-info gap-0.5">
                     <div className="col-span-3 p-title font-bold text-xl dark:text-white">
@@ -30,8 +32,8 @@ const Portfolio = () => {
             {/* items---------------------------------------------------------------------------- */}
             {/* items---------------------------------------------------------------------------- */}
             <div className="portfolio-card h-auto rounded-xl lg:rounded-2xl my-4 group">
-                <div className="p-card-img h-auto rounded-xl mb-1 border-2 border-gray-600 dark:bg-gray-900 items-center justify-center flex">
-                    <img src="src\assets\image\jewelry.png" alt="" className="p-card-image scale-85 drop-shadow-xl group-hover:drop-shadow-neutral-700 group-hover:scale-75 h-100 object-contain"/>
+                <div className="p-card-img h-auto rounded-xl mb-1 border-2 border-gray-600 bg-neutral-100 dark:bg-gray-900 items-center justify-center flex">
+                    <img src={jewerly} alt="" className="p-card-image scale-85 drop-shadow-xl group-hover:drop-shadow-neutral-700 group-hover:scale-75 h-100 object-contain"/>
                 </div>
                 <div className="p-card-info gap-0.5">
                     <div className="col-span-3 p-title font-bold text-xl dark:text-white">

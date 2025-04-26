@@ -57,17 +57,17 @@ const Home = () => {
   return (
     <div className="home h-auto mx-auto ">
         
-        <div id="hero" className="fixed h-[80%] w-[80%]  -translate-x-1/2 left-1/2 z-[-1]">
-            <h1 className="font-bold text-4xl w-xl m-auto mt-30 uppercase text-sky-700 dark:text-white
+        <div id="hero" className="fixed lg:h-[80%] lg:w-[80%] w-full -translate-x-1/2 left-1/2 z-[-1] ">
+            <h1 className="font-bold text-xl w-60 lg:text-4xl lg:w-xl mx-auto mt-30 uppercase text-sky-700 dark:text-white
             text-center transition-opacity duration-1500 ease-in" style={{ transform: `scale(${scale})`, opacity: opacity, lineHeight: "0.2"}}>
-            loves turning <span className="highligth-word">ideas</span> into interactive digital <span className="highligth-word">experiences</span>
+            time to turning <span className="highligth-word">ideas</span> into interactive digital <span className="highligth-word">experiences</span>
             </h1>
-            <h1 className="text-center font-semibold uppercase text-4xl mt-30 text-sky-700 dark:text-white" style={{ transform: `scale(${scale})`, opacity: opacity}}>
-                While Still a student
+            <h1 className="text-center font-semibold uppercase text-md lg:text-4xl mt-30 text-sky-700 dark:text-white" style={{ transform: `scale(${scale})`, opacity: opacity}}>
+                Just A Curious Student Want to learn more
             </h1>
         </div>
         <div className="padding-div h-screen">
-            <button className="btn rounded-4xl font-semibold text-white border-2 border-sky-700 bg-sky-400 shadow-md shadow-gray-600 relative block z-1 top-[70%] left-[80%] min-h-10 min-w-auto p-4 hover:rounded-xl"
+            <button className="btn rounded-4xl font-semibold text-white border-2 border-sky-700 bg-sky-400 shadow-md shadow-gray-600 relative block z-1 top-[70%] lg:left-[80%] left-[55%] min-h-10 min-w-auto p-4 hover:rounded-xl"
              onClick={handleClick} >Contact Me</button>
 
         </div>
@@ -102,8 +102,8 @@ const Home = () => {
             <hr className="text-neutral-900 dark:text-white border-t-2 "/>
             <h2 className="title-describe">Technologies I've Worked With</h2>
             <div className="Tools h-auto my-0 pb-4">
-                <div class="scroller mx-auto" data-direction="left" data-speed="fast">
-                    <div class="scroller__inner">
+                <div className="scroller mx-auto" data-direction="left" data-speed="fast">
+                    <div className="scroller__inner">
                         <img src="https://abrudz.github.io/logos/Java.svg"/>
                         <img src="https://abrudz.github.io/logos/CPlusPlus.svg"/>
                         <img src="https://abrudz.github.io/logos/PHP.svg"/>
